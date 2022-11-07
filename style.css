@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(177, 68%, 64%);
+  --orange: hsl(12, 94%, 65%);
+  --orange-hover: hsl(33, 100%, 70%);
+  --white: hsl(20, 33%, 98%);
+  --black: hsl(244, 23%, 12%);
+
+  --ff-ibm-plex-sans: "IBM Plex Sans", sans-serif;
+
+  --fs-body-sm: 1rem;
+  --fs-body-sm-tab: 1.125rem;
+
+  --lh-body-sm: 1.625rem;
+  --lh-body-sm-tab: 1.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  transition: all ease 0.2s;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-ibm-plex-sans);
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body-sm);
+  color: var(--black);
+  background-image: url(/images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-position: left top -12.5rem;
+}
+
+h1 {
+  font-family: var(--ff-ibm-plex-sans);
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  padding-bottom: 2.25rem;
+}
+
+.br-12 {
+  border-radius: 0.75rem;
+}
+
+.p-inline {
+  padding: 0 1.5rem;
+}
+
+/* HEADER */
+
+.header {
+  padding-top: 2.5rem;
+}
+
+/* HERO */
+
+.hero {
+  margin: 4.7rem 0 7.8rem 0;
+}
+
+/* APP */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--black) url(/images/bg-pattern-2.svg) no-repeat left 35px top;
+}
+
+.app-phone {
+  width: 13rem;
+  margin: 0 auto;
+  transform: translateY(-5rem);
+  cursor: pointer;
+}
+
+.app-phone:hover {
+  filter: hue-rotate(190deg) saturate(3);
+}
+
+/* CARD */
+
+.card {
+  background-color: var(--orange);
+  padding: 3rem 1.875rem;
+  color: var(--white);
+}
+
+.card h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.card-body {
+  font-size: var(--fs-body-sm-tab);
+  line-height: 28px;
+  padding-bottom: 10px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin: 1.75rem 0 2.8rem;
+}
+
+.price h3 {
+  font-size: 4rem;
+}
+
+.price p {
+  font-size: 1.25rem;
+  margin-left: 0.625rem;
+}
+
+.btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-body-sm-tab);
+  font-weight: 600;
+  padding: 1.125rem;
+  cursor: pointer;
+}
+
+.btn img {
+  margin-right: 1rem;
+}
+
+.btn-ios {
+  background-color: var(--black);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.btn-ios:hover {
+  background-color: var(--cyan);
+}
+
+.btn-android {
+  background-color: var(--white);
+}
+
+.btn-android:hover {
+  background-color: var(--orange-hover);
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 3.125rem;
+}
+
+.footer-logo {
+  margin-bottom: 1.875rem;
+}
+
+.footer-contact {
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body-sm);
+}
+
+.footer-social {
+  display: flex;
+  width: 6.25rem;
+  justify-content: space-between;
+  padding: 3.75rem 0 4.375rem 0;
+}
+
+.footer-social img {
+  cursor: pointer;
+}
+
+.footer-social img:hover {
+  filter: invert(65%) sepia(55%) saturate(2000%) hue-rotate(150deg)
+    brightness(103%) contrast(76%);
+  transition: ease-in-out 0.2s;
+}
+
+/* Tablet Styles / 640px */
+
+@media only screen and (min-width: 40em) {
+  body {
+    font-size: var(--fs-body-sm-tab);
+    line-height: var(--lh-body-sm-tab);
+    background-image: url(/images/bg-pattern-1.svg),
+      url(/images/bg-main-tablet.png);
+    background-repeat: no-repeat;
+    background-size: 16.6rem, auto;
+    background-position: top -1.875rem left 33.1rem,
+      right -3.125rem top -15.6rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 700;
+    padding-bottom: 2.5rem;
+  }
+
+  .p-inline {
+    padding: 0 2.5rem;
+  }
+
+  .header {
+    padding-top: 2.5rem;
+  }
+
+  .hero {
+    margin: 6.25rem 0 15rem 0;
+    width: 35.6rem;
+  }
+
+  .app {
+    flex-direction: row;
+    background: var(--black) url(/images/bg-pattern-2.svg) no-repeat;
+    background-position: top -1.56rem left 14.4rem;
+    margin: 0 2.18rem;
+  }
+
+  .app-phone {
+    width: 16.875rem;
+    z-index: 1;
+    transform: translate(3.43rem, -7.5rem);
+  }
+
+  .card {
+    z-index: 2;
+    width: 25rem;
+    transform: translate(-3.43rem, 10.625rem);
+  }
+
+  .footer {
+    margin-top: 12.5rem;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-contact p {
+    width: 25rem;
+  }
+}
+
+/* Small Screen Styles / 1024px */
+
+@media only screen and (min-width: 64em) {
+  body {
+    background-image: url(/images/bg-pattern-1.svg),
+      url(/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 19.5rem, auto;
+    background-position: top -2.5rem right 0px, right -15.62rem top -15.62rem;
+  }
+
+  .hero {
+    width: 40rem;
+  }
+
+  .app {
+    flex-direction: row;
+    background: var(--black) url(/images/bg-pattern-2.svg) no-repeat;
+    background-position: top 12.5rem left 6.25rem;
+    margin: 0 2.5rem;
+  }
+
+  .app-phone {
+    width: 19.68rem;
+    transform: translate(3.125rem, -11.25rem);
+  }
+
+  .card {
+    width: 28.1rem;
+    padding: 3.75rem;
+    transform: translate(-9.375rem, 6.25rem);
+  }
+
+  .card h2 {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    padding-bottom: 1.56rem;
+  }
+
+  .card-body {
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+  }
+
+  .price {
+    margin: 1.875rem 0 3.43rem;
+  }
+}
+
+/* Medium Screen Styles / 1440px */
+
+@media only screen and (min-width: 88em) {
+  body {
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    background-image: url(/images/bg-pattern-1.svg),
+      url(/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 19.5rem, auto;
+    background-position: top -2.5rem right 0px, right -15.62rem top -15.62rem;
+    padding: 0 9.2rem;
+  }
+
+  h1 {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    margin-top: 8.75rem;
+  }
+
+  .p-inline {
+    padding: 0px;
+  }
+
+  .header {
+    padding-top: 3.875rem;
+  }
+
+  .hero {
+    margin: 6.25rem 0 18.75rem 0;
+    width: 56.25rem;
+  }
+
+  .hero-body {
+    width: 53.1rem;
+  }
+
+  .app {
+    background: var(--black) url(/images/bg-pattern-2.svg) no-repeat;
+    background-position: top -2.18rem left 21.2rem;
+    margin: 0;
+  }
+
+  .app-phone {
+    width: 19.68rem;
+    transform: translate(-5.5rem, -13.75rem);
+  }
+
+  .card {
+    width: 28.125rem;
+    padding: 3.75rem 3.75rem;
+    transform: translate(-7.5rem, 6rem);
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 18.75rem 52.5rem;
+    margin-bottom: 4.375rem;
+  }
+
+  .footer-logo {
+    margin-bottom: 0;
+  }
+
+  .footer-contact p {
+    width: 31.25rem;
+  }
+
+  .footer-social {
+    padding: 0;
+    transform: translateY(35%);
+  }
+}
+
+/* Large Screen Styles / 1700px */
+
+@media only screen and (min-width: 106em) {
+  body {
+    padding: 0 18.75rem;
+  }
+}
