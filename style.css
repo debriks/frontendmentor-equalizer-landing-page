@@ -432,4 +432,12 @@ h1 {
   body {
     padding: 0 18.75rem;
   }
+
+  .app-phone {
+    transform: translate(-4.8rem, -13.75rem);
+  }
+
+  .card {
+    transform: translate(-7.5rem, 6rem);
+  }
 }
